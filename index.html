@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parka Fitness Ebook</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:Arial, sans-serif; color:#333; background:#fdf8f2; line-height:1.6; }
+  header { background:#f9f4ef; text-align:center; padding:100px 20px; position:relative; overflow:hidden; }
+  header img.logo { max-width:150px; margin-bottom:20px; position:relative; z-index:2; }
+  header h1 { font-size:3rem; color:#4b3b2a; margin-bottom:15px; position:relative; z-index:2; }
+  header p { font-size:1.2rem; color:#6b5e53; margin-bottom:15px; position:relative; z-index:2; }
+  .price { font-weight:bold; font-size:1.4rem; color:#c94c4c; margin-bottom:25px; position:relative; z-index:2; }
+  .btn { background:#c94c4c; color:white; padding:15px 35px; font-weight:600; border-radius:50px; text-decoration:none; transition:0.3s; box-shadow:0 4px 8px rgba(0,0,0,0.2); position:relative; z-index:2; display:inline-block; }
+  .btn:hover { background:#b33b3b; box-shadow:0 6px 12px rgba(0,0,0,0.25); }
+  section { padding:80px 20px; max-width:1000px; margin:0 auto; text-align:center; }
+  section h2 { font-size:2.2rem; margin-bottom:40px; color:#4b3b2a; }
+  .features { display:flex; flex-wrap:wrap; justify-content:center; gap:40px; }
+  .feature { background:#fff8f0; padding:25px; border-radius:15px; flex:1 1 250px; box-shadow:0 4px 10px rgba(0,0,0,0.05); transition:transform 0.3s; }
+  .feature:hover { transform:translateY(-5px); }
+  .feature h3 { margin-bottom:15px; color:#4b3b2a; font-weight:bold; }
+  .feature p { color:#6b5e53; }
+  .reviews { max-width:600px; margin:0 auto; text-align:left; }
+  .review-item { background:#fff8f0; padding:15px; border-radius:10px; margin-bottom:15px; box-shadow:0 2px 5px rgba(0,0,0,0.05); }
+  .review-form { margin-top:30px; background:#fff8f0; padding:20px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.05); }
+  .review-form input, .review-form textarea { width:100%; padding:10px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px; }
+  .disclaimer { font-size:0.85rem; color:#6b5e53; margin-top:20px; }
+  footer { background:#4b3b2a; color:white; padding:40px 20px; text-align:center; }
+  footer a { margin:0 10px; text-decoration:none; display:inline-block; }
+  footer img { width:35px; height:35px; vertical-align:middle; }
+  .fade-in { opacity:0; transform:translateY(20px); animation:fadeIn 1s forwards; }
+  @keyframes fadeIn { to { opacity:1; transform:translateY(0); } }
+  @media (max-width:768px) { header h1{font-size:2.2rem;} section h2{font-size:1.8rem;} .features{flex-direction:column; gap:20px;} }
+</style>
+</head>
+<body>
+
+<header class="fade-in">
+  <img src="templates/pf_logo.png" alt="Parka Fitness Logo" class="logo">
+  
+  <h1>Scientific Principles of Resistance Training</h1>
+  <p>Learn how to train smarter, recover faster, and build strength efficiently with a science-backed system.</p>
+  <div class="price">£0.99 <span style="text-decoration:line-through;color:#999;">£1.99</span> (50% off)</div>
+  <a href="file:///C:/Users/coope/Downloads/Scientific%20Principles%20of%20Resistance%20Training.pdf" class="btn" target="_blank">Download Now</a>
+</header>
+
+<section class="fade-in">
+  <h2>What You'll Learn</h2>
+  <div class="features">
+    <div class="feature fade-in">
+      <h3>Sleep for Maximum Gains</h3>
+      <p>Why sleep is the foundation of strength, recovery, and growth, and how to optimize it effectively.</p>
+    </div>
+    <div class="feature fade-in">
+      <h3>Train Smart: Size & Strength</h3>
+      <p>Understand hypertrophy types, muscle fibers, and training methods tailored to your goals.</p>
+    </div>
+    <div class="feature fade-in">
+      <h3>Nutrition Simplified</h3>
+      <p>Learn how macronutrients, micronutrients, and hydration work together to fuel performance and recovery.</p>
+    </div>
+    <div class="feature fade-in">
+      <h3>Body Types & Personalization</h3>
+      <p>Adapt your training and diet to your body type for sustainable results and long-term health.</p>
+    </div>
+    <div class="feature fade-in">
+      <h3>Prevent Overtraining & Injury</h3>
+      <p>Manage intensity, recovery, and joint health to avoid plateaus and injuries.</p>
+    </div>
+  </div>
+</section>
+
+<section class="fade-in">
+  <h2>Reader Reviews</h2>
+  <div class="reviews" id="reviews">
+    <p style="color:#5c5145;">Be the first to leave a review!</p>
+  </div>
+  <div class="review-form">
+    <h3>Leave a Review</h3>
+    <input type="text" id="name" placeholder="Your name">
+    <textarea id="review" rows="4" placeholder="Your thoughts about the ebook"></textarea>
+    <button class="btn" onclick="submitReview()">Submit Review</button>
+  </div>
+</section>
+
+<section class="fade-in">
+  <a href="file:///C:/Users/coope/Downloads/Scientific%20Principles%20of%20Resistance%20Training.pdf" class="btn" target="_blank">Download Your Copy Now</a>
+</section>
+
+<footer class="fade-in">
+  <p>&copy; 2025 Parka Fitness</p>
+  <div>
+    <a href="https://www.instagram.com/brandonparkash/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
+    <a href="https://www.youtube.com/@bc.yt189" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+    <a href="https://www.tiktok.com/@parka_fitness" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046123.png" alt="TikTok"></a>
+  </div>
+  <div class="disclaimer">
+    <p>No refunds available as the ebook is a digital download.</p>
+  </div>
+</footer>
+
+<script>
+  // Fade-in animation delays
+  const fadeEls = document.querySelectorAll('.fade-in');
+  fadeEls.forEach((el,i)=>{ el.style.animationDelay = `${i*0.3}s`; });
+
+  // Simple review submission (client-side)
+  function submitReview() {
+    const name = document.getElementById('name').value.trim() || "Anonymous";
+    const review = document.getElementById('review').value.trim();
+    if(!review) { alert("Please write a review."); return; }
+    const reviewEl = document.createElement('div');
+    reviewEl.className = "review-item";
+    reviewEl.innerHTML = `<strong>${name}:</strong><p>${review}</p>`;
+    document.getElementById('reviews').prepend(reviewEl);
+    document.getElementById('name').value=''; document.getElementById('review').value='';
+  }
+</script>
+
+</body>
+</html>
